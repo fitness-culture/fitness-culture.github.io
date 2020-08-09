@@ -72,7 +72,7 @@ function postToGoogle() {
                       url: "https://docs.google.com/forms/d/e/1FAIpQLSfmGdWsNaKdzH-eH6T_VFxmGQgKrbAocw-OEL53eTYt-5t6Pw/formResponse?",
 					             data: {"entry.2005620554 ": field1, "entry.1045781291": field2, "entry.1166974658": field3, "entry.839337160": field4,},
                       type: "POST",
-                      dataType: "xml";
+                      dataType: "xml",
                     success: function(d)
 					{
 					},
@@ -194,14 +194,14 @@ label.light {
 }
 
 .content{
-    background-image: url('../assets/img/slider/Bicycle.jpg');
+    background-image: url('{{site.baseurl}}/assets/img/slider/Bicycle.jpg');
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   }
 body{
-  background-image: url('../assets/img/slider/bg.jpg');
+  background-image: url('{{site.baseurl}}/assets/img/slider/bg.jpg');
   
 }
 
