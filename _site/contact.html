@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+  <!-- meta data & title -->
+  <meta charset="utf-8">
+  <title>Shilpa's | Healthy Lifestyle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consult Till You Get It Right
+">
+  <meta name="author" content="">
+
+  <!-- Favicon and touch icons -->
+  <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/animate.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+  <!-- Header -->
+<nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation">
+  <div class="container">
+  
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand wow fadeInDownBig" href="index.html"><img class="office-logo" src="../assets/img/slider/Office.png" alt="Office"></a>      
+  </div>
+
+  <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav pull-right">
+      <li class="active">
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/about.html">About</a>
+      </li>
+      <!-- <li>
+        <a href="/blog.html">Blog</a>
+      </li> -->
+      <!-- <li>
+        <a href="/team.html">Team</a>
+      </li> -->
+      <li>
+        <a href="/contact.html"><span>Contact</span></a>
+      </li>
+    </ul>         
+  </div>
+  </div>
+</nav>
+
+<!-- End Header -->
+  <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+
+  <body>
+    <!-- Main Container -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+                                                                                           
+</head>
+<body>
+<section>
+<div class="row">
+    <div class="col-md-12">
+      	<form id="form" target="_self" onsubmit="return postToGoogle();" action="https://docs.google.com/forms/d/e/1FAIpQLSfmGdWsNaKdzH-eH6T_VFxmGQgKrbAocw-OEL53eTYt-5t6Pw/formResponse" autocomplete="on"> 
+        <h1> Feedback </h1>
+        <fieldset>
+           <label for="Name">Name</label>
+          <input id="Name" name="entry.2005620554" type="text" >
+          <label for="Email">Email</label>
+          <input id="Email" name="entry.1045781291" type="email" >
+          <!-- <label for="suggestion">Suggest Books</label>
+          <input id="suggestion" name=" entry.1052880661" type="text" > -->
+          <label for="Phone">Phone</label>
+          <input id="Phone" name="entry.1166974658" type="number">
+          <label for="Message">Message</label>
+          <input id="Message" name="entry.839337160" type="text">
+          <button id="send" type="submit" class="common_btn">Thanks for submission</button>
+          <h3 id="success-msg" style="text-align: center !important; margin-top:190px !important; display:none; color:#fff"> Thanks for Sharing</h3>
+      </fieldset>  
+       </form>
+        </div>
+      </div>
+	</section>
+
+
+<h3 id="success-msg" style="text-align: center !important; margin-top:190px !important; display:none; color:#fff"> Your Order has been Updated</h3>
+
+
+<script>
+function postToGoogle() {
+
+				
+                var field1 = $("#Name").val();
+                var field2 = $("#Email").val();
+                var field3 = $("#Phone").val();
+                var field4 = $("#Message").val();
+               
+				if(field1 == ""){
+					alert('Please Fill Your Name');
+					document.getElementById("nameField").focus();
+					return false;
+				}
+				if(field2 == ""){
+					alert('Please Fill Your Email');
+					document.getElementById("emailField").focus();
+					return false;
+				}
+				if(field3 == "" || field3.length > 10 || field3.length < 10){
+					alert('Please Fill Your Mobile Number');
+					document.getElementById("mobField").focus();
+					return false;
+				}
+
+
+				
+	
+                $.ajax({
+                      url: "https://docs.google.com/forms/d/e/1FAIpQLSfmGdWsNaKdzH-eH6T_VFxmGQgKrbAocw-OEL53eTYt-5t6Pw/formResponse?",
+					             data: {"entry.2005620554 ": field1, "entry.1045781291": field2, "entry.1166974658": field3, "entry.839337160": field4,},
+                      type: "POST",
+                      dataType: "xml";
+                    success: function(d)
+					{
+					},
+					error: function(x, y, z)
+						{
+
+							$('#success-msg').show();
+							$('#form').hide();
+							
+						}
+                });
+				return false;
+            }
+</script>
+<style>
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+}
+#form {
+  max-width: 450px;
+  margin: 100px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+h1 {
+  margin: 20px 0 30px 0;
+  text-align: center;
+}
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+@media only screen and (max-width: 600px) {
+  #form{
+    max-width:320px;
+  }
+}
+
+.content{
+    background-image: url('../assets/img/slider/Bicycle.jpg');
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+body{
+  background-image: url('../assets/img/slider/bg.jpg');
+  
+}
+
+</style>
+</body>
+
+
+    
+<!--End Main Container -->
+  </body>
+
+  <!-- Footer -->
+<footer> 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3><i class="fa fa-map-marker"></i> Contact:</h3>
+        <p class="footer-contact">
+          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.814802364649!2d75.81050212622561!3d30.89184142648398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a83d684e7e035%3A0x3e59d425719ffb45!2sDeepak%20Hospital!5e0!3m2!1sen!2sin!4v1596963955214!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+          Dietician Shipla's Healthy Lifestyle<br>
+          <a href="tel:+91-7009829853">7009829853</a> <br>
+          <a href = "mailto: lifestyle1.healthy@gmail.com">Send Email</a>
+          
+        </p>
+      </div>
+      <!-- <div class="col-md-4">
+        <h3><i class="fa fa-external-link"></i> Links</h3>
+        <p><a href="/about"> About ( Who we are )</a></p>
+        <p><a href="/about"> Services ( What we do )</a></p>
+        <p><a href="/contact"> Contact ( Feel free to contact )</a></p>
+        <p><a href="/blog"> Blog ( Write to us )</a></p>
+        <p><a href="/team"> Team ( Meet the Team )</a></p> 
+      </div> -->
+      <div class="col-md-4">
+        <h3><i class="fa fa-heart"></i> Socialize</h3>
+        <div id="social-icons">
+          
+            <a href="#" class="btn-group google-plus">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          
+
+          
+            <a href="#" class="btn-group linkedin">
+              <i class="fa fa-linkedin-square"></i>
+            </a>
+          
+
+        
+            <a href="#" class="btn-group twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+         
+
+          
+            <a href="#" class="btn-group facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          
+        </div>
+      </div>    
+    </div>
+  </div>
+
+  <div class="copyright text center">
+    <p>&copy; Copyright 2020, <a href="#">Healthy Life</a>. <br>Made By  <a href="https://github.com/Gupta-Anubhav12" target="_blank">Anubhav Gupta</a></p>
+  </div>
+</footer>
+</html>
